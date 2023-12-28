@@ -10,12 +10,22 @@
 	<script>
 		alert( 'Fetching' );
 		getFavoritePlaces()
+		getFavoritePlaces2()
 	
 		async function getFavoritePlaces() {
 			  const response = await fetch("https://a-test-node-c3.azurewebsites.net/api/favorite-places");
 			  
 			  const places = await response.json();
+			  console.log('Getting favorite places: https://a-test-node-c3.azurewebsites.net/api/favorite-places')
 			  console.log(places);
+		}
+
+		async function getFavoritePlaces2() {
+			  const response = await fetch("https://merna-node-js-template.azurewebsites.net/api/favorite-places");
+			  
+			  const places2 = await response.json();
+			  console.log('Getting favorite places: https://merna-node-js-template.azurewebsites.net/api/favorite-places')
+			  console.log(places2);
 		}
 	</script>
 </body>
